@@ -1,21 +1,21 @@
 #ifndef DataStructure_Trigger_h
 #define DataStructure_Trigger_h
 
-namespace DataStructure {
-class Initiator;
-class Source;
-} /* End of namespace DataStructure */
+#include "Source.h"
+
 
 namespace DataStructure {
 
 class Trigger {
+private:
 
- public:
+	std::string name;
+	int id;
 
+public:
 
-    Initiator *myInitiator;
-
-
+	std::string getName();
+	int getName();
     Source *mySource;
 
 };

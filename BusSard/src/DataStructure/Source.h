@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 
-#include "Initiator.h"
+#include "Member.h"
 #include "Trigger.h"
 
 namespace DataStructure {
@@ -19,7 +19,7 @@ private:
 
 	std::string getName();
 
-    Initiator* initiator;
+    Member* myMember;
 
 
     std::vector<Trigger*> myTrigger;
