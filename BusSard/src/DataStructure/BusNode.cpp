@@ -1,10 +1,5 @@
-#include "/BusNode.h"
+#include "DataStructure/BusNode.h"
 
 namespace DataStructure {
-
-	std::string BusNode::getName()
-	{
-		return name;
-	}
 
 }

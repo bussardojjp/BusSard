@@ -4,8 +4,7 @@
 #include <vector>
 #include <string>
 
-#include "Actuator.h"
-#include "Parameter.h"
+#include "DataStructure/Parameter.h"
 
 
 namespace DataStructure {
@@ -18,8 +17,6 @@ private:
 public:
 
 	std::string getName();
-
-	Actuator* actuator;
 
 	std::vector<Parameter*> myParameter;
 };

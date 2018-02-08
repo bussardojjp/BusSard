@@ -4,13 +4,13 @@
 #include <vector>
 #include <string>
 
-#include "BusNode.h"
-#include "Initiator.h"
-#include "Actuator.h"
-#include "Rules.h"
+#include "DataStructure/BusNode.h"
+#include "DataStructure/Rules.h"
 
 
 namespace DataStructure {
+
+class BusNode;
 
 class Member {
 

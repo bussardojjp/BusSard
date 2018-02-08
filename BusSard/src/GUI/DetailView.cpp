@@ -1,4 +1,4 @@
-#include "DetailView.h"
+#include "GUI/DetailView.h"
 
 namespace GUI {
 

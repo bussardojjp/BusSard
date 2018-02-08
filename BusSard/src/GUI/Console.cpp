@@ -1,4 +1,4 @@
-#include "Console.h"
+#include "GUI/Console.h"
 
 namespace GUI {
 

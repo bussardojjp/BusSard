@@ -9,6 +9,8 @@
 
 namespace DataStructure {
 
+class Trigger;
+
 class Source {
 
 private:

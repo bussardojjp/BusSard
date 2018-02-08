@@ -1,4 +1,4 @@
-#include "BusView.h"
+#include "GUI/BusView.h"
 
 namespace GUI {
 

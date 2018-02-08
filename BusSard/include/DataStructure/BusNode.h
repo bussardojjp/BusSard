@@ -3,11 +3,15 @@
 
 #include <vector>
 #include <string>
-#include "Bus.h"
-#include "Member.h"
+#include "DataStructure/Bus.h"
+#include "DataStructure/Member.h"
 
 
 namespace DataStructure {
+
+class Member;
+class Rules;
+class Bus;
 
 class BusNode {
 

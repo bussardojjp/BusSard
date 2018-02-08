@@ -1,4 +1,4 @@
-#include "CAN_Generator.h"
+#include "BusCom/CAN_Generator.h"
 
 namespace BusCom {
 

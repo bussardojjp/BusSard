@@ -1,4 +1,4 @@
-#include "/Dependency.h"
+#include "DataStructure/Dependency.h"
 
 namespace DataStructure {
 

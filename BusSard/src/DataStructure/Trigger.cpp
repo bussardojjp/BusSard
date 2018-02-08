@@ -1,4 +1,4 @@
-#include "/Trigger.h"
+#include "DataStructure/Trigger.h"
 
 namespace DataStructure {
 

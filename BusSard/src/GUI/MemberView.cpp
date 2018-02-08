@@ -1,4 +1,4 @@
-#include "MemberView.h"
+#include "GUI/MemberView.h"
 
 namespace GUI {
 

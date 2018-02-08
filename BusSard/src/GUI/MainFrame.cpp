@@ -1,4 +1,4 @@
-#include "MainFrame.h"
+#include "GUI/MainFrame.h"
 
 namespace GUI {
 

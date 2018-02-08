@@ -1,9 +1,11 @@
 #ifndef DataStructure_Rules_h
 #define DataStructure_Rules_h
 
-#include "Member.h"
+#include "DataStructure/Member.h"
 
 namespace DataStructure {
+
+class Member;
 
 class Rules {
 

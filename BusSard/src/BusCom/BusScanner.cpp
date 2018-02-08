@@ -1,4 +1,4 @@
-#include "BusScanner.h"
+#include "BusCom/BusScanner.h"
 
 namespace BusCom {
 

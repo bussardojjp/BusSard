@@ -1,4 +1,4 @@
-#include "Configuration.h"
+#include "Parser/Configuration.h"
 
 namespace Parser {
 

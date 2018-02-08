@@ -1,10 +1,14 @@
 #ifndef DataStructure_Trigger_h
 #define DataStructure_Trigger_h
 
+#include <string>
+
 #include "Source.h"
 
 
 namespace DataStructure {
+
+class Source;
 
 class Trigger {
 private:
@@ -15,7 +19,7 @@ private:
 public:
 
 	std::string getName();
-	int getName();
+	int getID();
     Source *mySource;
 
 };

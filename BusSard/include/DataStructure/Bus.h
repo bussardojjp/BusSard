@@ -3,13 +3,15 @@
 
 #include <vector>
 
-#include "BusSubscriber.h"
-#include "BusNode.h"
+#include "DataStructure/BusSubscriber.h"
+#include "DataStructure/BusNode.h"
 
 
 namespace DataStructure {
 
 class CGuard;
+class BusNode;
+class BusSubscriber;
 
 class Bus {
 
@@ -21,12 +23,14 @@ class Bus {
 
     std::vector<BusNode*> myBusNodes;
 
+    static Bus* instance;
+
+    virtual ~Bus(){}
+
  private:
 
-    static Bus* instance;
     Bus();
     Bus(const Bus&);
-    ~Bus (){}
 
 };
 

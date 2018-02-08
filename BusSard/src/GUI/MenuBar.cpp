@@ -1,4 +1,4 @@
-#include "MenuBar.h"
+#include "GUI/MenuBar.h"
 
 namespace GUI {
 
