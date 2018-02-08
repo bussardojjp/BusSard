@@ -3,38 +3,48 @@
 
 #include <vector>
 
-#include "Bus.h"
+#include "BusSubscriber.h"
+#include "BusNode.h"
+
 
 namespace DataStructure {
-	class BusSubscriber;
-	class BusNode;
-} /* End of namespace DataStructure */
 
-namespace DataStructure {
+class CGuard;
 
 class Bus {
 
  public:
 
     static Bus* getInstance();
-
-
- private:
-    static Bus instance;
-
- public:
-
-    /**
-     * @element-type BusSubscriber
-     */
+    static CGuard g;
     BusSubscriber* busSub;
 
-    /**
-     * @element-type BusNode
-     */
     std::vector<BusNode*> myBusNodes;
+
+ private:
+
+    static Bus* instance;
+    Bus();
+    Bus(const Bus&);
+    ~Bus (){}
+
 };
 
-} /* End of namespace DataStructure */
+Bus* Bus::instance = 0;
 
-#endif // DataStructure_Bus_h
+class CGuard
+{
+public:
+	~CGuard()
+	{
+		if(NULL != Bus::instance)
+		{
+			delete Bus::instance;
+			Bus::instance = NULL;
+		}
+	}
+};
+
+}
+
+#endif

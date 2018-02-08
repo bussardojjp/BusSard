@@ -2,31 +2,28 @@
 #define DataStructure_Skill_h
 
 #include <vector>
+#include <string>
 
 #include "Actuator.h"
+#include "Parameter.h"
 
-namespace DataStructure {
-class Actuator;
-class Parameter;
-} /* End of namespace DataStructure */
 
 namespace DataStructure {
 
 class Skill {
+private:
 
- public:
+	std::string name;
 
-    /**
-     * @element-type Actuator
-     */
-    Actuator* actuator;
+public:
 
-    /**
-     * @element-type Parameter
-     */
-    std::vector<Parameter*> myParameter;
+	std::string getName();
+
+	Actuator* actuator;
+
+	std::vector<Parameter*> myParameter;
 };
 
-} /* End of namespace DataStructure */
+}
 
-#endif // DataStructure_Skill_h
+#endif

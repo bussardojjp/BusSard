@@ -2,6 +2,7 @@
 #define DataStructure_Source_h
 
 #include <vector>
+#include <string>
 
 #include "Initiator.h"
 #include "Trigger.h"
@@ -10,20 +11,21 @@ namespace DataStructure {
 
 class Source {
 
+private:
+
+	std::string name;
+
  public:
 
-    /**
-     * @element-type Initiator
-     */
+	std::string getName();
+
     Initiator* initiator;
 
-    /**
-     * @element-type Trigger
-     */
+
     std::vector<Trigger*> myTrigger;
 
 };
 
-} /* End of namespace DataStructure */
+}
 
-#endif // DataStructure_Source_h
+#endif

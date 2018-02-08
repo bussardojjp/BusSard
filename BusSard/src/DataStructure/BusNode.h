@@ -2,30 +2,33 @@
 #define DataStructure_BusNode_h
 
 #include <vector>
+#include <string>
+#include "Bus.h"
+#include "Member.h"
 
-
-namespace DataStructure {
-class Bus;
-class Member;
-} /* End of namespace DataStructure */
 
 namespace DataStructure {
 
 class BusNode {
 
- public:
+private:
 
-    /**
-     * @element-type Bus
-     */
+	std::string name;
+
+	int identifier;
+
+	//Icon
+
+public:
+
+	std::string getName();
+
     Bus *myBus;
 
-    /**
-     * @element-type Member
-     */
     std::vector<Member*> myMembers;
+
+    std::vector<Rules*> myRules;
 };
 
-} /* End of namespace DataStructure */
-
-#endif // DataStructure_BusNode_h
+}
+#endif

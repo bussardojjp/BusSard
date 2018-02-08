@@ -2,43 +2,32 @@
 #define DataStructure_Member_h
 
 #include <vector>
+#include <string>
 
 #include "BusNode.h"
+#include "Initiator.h"
+#include "Actuator.h"
+#include "Rules.h"
 
-namespace DataStructure {
-class BusNode;
-class Initiator;
-class Actuator;
-class Rules;
-} /* End of namespace DataStructure */
 
 namespace DataStructure {
 
 class Member {
 
- public:
+private:
 
-    /**
-     * @element-type Initiator
-     */
-    Initiator *myInitiator;
+	int subId;
+	std::string name;
+	std::string description;
+
+	// Iconadress
 
 
-    /**
-     * @element-type Actuator
-     */
-    Actuator *myActuator;
+public:
 
-    BusNode bn;
-
-    /**
-     * @element-type Rules
-     */
-    std::vector<Rules*> myRules;
 
     BusNode *myBusNode;
 };
 
-} /* End of namespace DataStructure */
-
-#endif // DataStructure_Member_h
+}
+#endif

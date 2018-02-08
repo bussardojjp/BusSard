@@ -1,9 +1,7 @@
 #ifndef DataStructure_Rules_h
 #define DataStructure_Rules_h
 
-namespace DataStructure {
-class Member;
-} /* End of namespace DataStructure */
+#include "Member.h"
 
 namespace DataStructure {
 
@@ -11,13 +9,10 @@ class Rules {
 
  public:
 
-    /**
-     * @element-type Member
-     */
-    Member *myMember;
+	Member *myMember;
 
 };
 
-} /* End of namespace DataStructure */
+}
 
-#endif // DataStructure_Rules_h
+#endif

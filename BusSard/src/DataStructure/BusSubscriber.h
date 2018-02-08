@@ -2,13 +2,8 @@
 #define DataStructure_BusSubscriber_h
 
 #include "Bus.h"
+#include "GUI/MainFrame.h"
 
-namespace DataStructure {
-class Bus;
-} /* End of namespace DataStructure */
-namespace GUI {
-class MainFrame;
-} /* End of namespace GUI */
 
 namespace DataStructure {
 
@@ -17,20 +12,14 @@ class BusSubscriber {
  public:
 
     virtual void onBusUpdate()  = 0;
+    virtual ~BusSubscriber() {}
 
  public:
 
-    /**
-     * @element-type Bus
-     */
     Bus* bus;
 
-    /**
-     * @element-type MainFrame
-     */
-    GUI::MainFrame *myMainFrame;
 };
 
-} /* End of namespace DataStructure */
+}
 
-#endif // DataStructure_BusSubscriber_h
+#endif

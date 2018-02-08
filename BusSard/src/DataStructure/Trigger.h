@@ -12,18 +12,14 @@ class Trigger {
 
  public:
 
-    /**
-     * @element-type Initiator
-     */
+
     Initiator *myInitiator;
 
-    /**
-     * @element-type Source
-     */
+
     Source *mySource;
 
 };
 
-} /* End of namespace DataStructure */
+}
 
-#endif // DataStructure_Trigger_h
+#endif

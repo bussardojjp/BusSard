@@ -2,5 +2,9 @@
 
 namespace DataStructure {
 
+	std::string BusNode::getName()
+	{
+		return name;
+	}
 
-} /* End of namespace DataStructure */
+}

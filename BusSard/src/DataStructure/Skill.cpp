@@ -2,5 +2,9 @@
 
 namespace DataStructure {
 
+std::string Skill::getName()
+{
+	return name;
+}
 
-} /* End of namespace DataStructure */
+}

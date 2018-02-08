@@ -2,5 +2,4 @@
 
 namespace DataStructure {
 
-
-} /* End of namespace DataStructure */
+}
