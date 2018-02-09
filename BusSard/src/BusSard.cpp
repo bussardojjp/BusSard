@@ -16,10 +16,11 @@
 int main()
 {
 
-   //Parser::ConfigurationCreator cf("resource/modules/test.xml");
-   //Parser::Configuration* conf = cf.readConfig();
+   Parser::ConfigurationCreator cf("resource/modules/test.xml");
+   Parser::Configuration* conf = cf.readConfig();
+
 	GUI::GUIBuilder ads;
-	ads.buildGUI(nullptr);
+	ads.buildGUI(conf);
    //Bus init
 
    //Com package

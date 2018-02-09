@@ -4,9 +4,9 @@
 namespace GUI {
 
 MainFrame::MainFrame(Parser::Configuration* conf){
-	nana::size s(800, 400);
+	nana::size s(conf->getResolutionX(), conf->getResolutionY());
 	size(s);
-	//size(conf->getSize());
+	move(-10, 0);
 }
 
 void MainFrame::onBusUpdate(){

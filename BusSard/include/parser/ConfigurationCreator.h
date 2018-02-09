@@ -19,7 +19,7 @@ private:
 	Configuration* appConfig;
 
 public:
-	ConfigurationCreator(const std::string path);
+	ConfigurationCreator(std::string path);
 	virtual ~ConfigurationCreator(){
 		delete appConfig;
 	};
