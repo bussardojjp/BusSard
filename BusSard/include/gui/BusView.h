@@ -1,6 +1,7 @@
 #ifndef GUI_BusView_h
 #define GUI_BusView_h
 
+
 namespace GUI {
 class MainFrame;
 } /* End of namespace GUI */

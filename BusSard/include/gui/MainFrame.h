@@ -1,6 +1,8 @@
 #ifndef GUI_MainFrame_h
 #define GUI_MainFrame_h
 
+#include "nana/gui/widgets/form.hpp"
+#include "parser/Configuration.h"
 
 namespace GUI {
 class DetailView;
@@ -11,7 +13,8 @@ class Console;
 
 namespace GUI {
 
-class MainFrame {//: public DataStructure::BusSubscriber {
+class MainFrame : public nana::form
+{//: public DataStructure::BusSubscriber {
 
  public:
 
@@ -19,6 +22,7 @@ class MainFrame {//: public DataStructure::BusSubscriber {
 
  public:
 
+    MainFrame(Parser::Configuration* conf);
     /**
      * @element-type BusSubscriber
      */

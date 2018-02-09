@@ -9,6 +9,8 @@
 #include "nana/gui/wvl.hpp"
 #include "nana/gui/widgets/picture.hpp"
 #include "nana/gui/place.hpp"
+#include "nana/gui/widgets/panel.hpp"
+#include "gui/MainFrame.h"
 
 namespace GUI {
 
@@ -21,17 +23,31 @@ GUIBuilder::~GUIBuilder() {
 	// TODO Auto-generated destructor stub
 }
 
-void GUIBuilder::buildGUI()
+void GUIBuilder::buildGUI(Parser::Configuration* conf)
 {
 	using namespace nana;
-	form mainWindow(API::make_center(800,600));
-	size sizeBus(50,50);
+	MainFrame mainWindow(conf);
+	place myPlace(mainWindow);
+
+	panel<false> w(mainWindow);
+	place subPlace(w);
+
+	size sizeBus(600,800);
+	//MainFrame sideWindow(conf);
 	picture picBusUnin(mainWindow);
+
 	picBusUnin.stretchable(1);
-	place placeBusUnin(mainWindow);
-	placeBusUnin.div("picBusUnin");
-	placeBusUnin["picBusUnin"] << picBusUnin;
+
+
+
+	myPlace.div("vert<birne><bus>");
+	myPlace["birne"] << w;
+
+	subPlace.div("<oben><unten>");
+	//subPlace["oben"] << picBusUnin;
+
 	picBusUnin.size(sizeBus);
+
 	picBusUnin.load(paint::image("resource/Busleitung.png"));
 	mainWindow.show();
 

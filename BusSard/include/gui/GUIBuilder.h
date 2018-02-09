@@ -12,13 +12,15 @@
 #include "nana/gui/widgets/picture.hpp"
 #include "nana/gui/place.hpp"
 
+#include "parser/Configuration.h"
+
 namespace GUI {
 
 class GUIBuilder {
 public:
 	GUIBuilder();
 	virtual ~GUIBuilder();
-	void buildGUI();
+	void buildGUI(Parser::Configuration* conf);
 };
 
 } /* namespace GUI */
