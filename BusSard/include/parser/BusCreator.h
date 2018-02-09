@@ -11,10 +11,6 @@ class BusCreator {
 
  public:
 
-    /**
-     * @element-type XML_Writer
-     */
-    XML_Writer *myXML_Writer;
 };
 
 } /* End of namespace Parser */

@@ -1,32 +1,30 @@
 #ifndef Parser_ConfigurationCreator_h
 #define Parser_ConfigurationCreator_h
 
+#include <string>
+
+#include "parser/Configuration.h"
+
 namespace Parser {
 class XML_Writer;
 class XML_Reader;
-class Configuration;
 } /* End of namespace Parser */
 
 namespace Parser {
 
 class ConfigurationCreator {
 
- public:
+private:
+	Configuration* appConfig;
 
-    /**
-     * @element-type XML_Writer
-     */
-    XML_Writer *myXML_Writer;
+public:
+	ConfigurationCreator(std::string path);
+	virtual ~ConfigurationCreator(){
+		delete appConfig;
+	};
 
-    /**
-     * @element-type XML_Reader
-     */
-    XML_Reader *myXML_Reader;
+	Configuration* readConfig();
 
-    /**
-     * @element-type Configuration
-     */
-    Configuration *myConfiguration;
 };
 
 } /* End of namespace Parser */

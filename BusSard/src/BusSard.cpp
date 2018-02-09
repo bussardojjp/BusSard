@@ -6,15 +6,10 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include <nana/gui/wvl.hpp>
-#include <nana/gui/widgets/label.hpp>
+#include <parser/ConfigurationCreator.h>
 
 int main()
 {
-    using namespace nana;
-    form    fm;
-    label   lb(fm, rectangle(fm.size()));
-    lb.caption("Hello, World");
-    fm.show();
-    exec();
+   Parser::ConfigurationCreator cf("resource/modules/test.xml");
+   cf.readConfig();
 }
