@@ -11,10 +11,6 @@ class InitiatorCreator {
 
  public:
 
-    /**
-     * @element-type XML_Reader
-     */
-    XML_Reader *myXML_Reader;
 };
 
 } /* End of namespace Parser */
