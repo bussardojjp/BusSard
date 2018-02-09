@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+
 #include "DataStructure/Bus.h"
 #include "DataStructure/Member.h"
 
@@ -35,4 +36,5 @@ public:
 };
 
 }
+
 #endif

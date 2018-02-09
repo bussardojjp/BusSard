@@ -11,7 +11,7 @@ class BusSubscriber {
 
  public:
 
-    virtual void onBusUpdate()  = 0;
+    virtual void onBusUpdate() = 0;
     virtual ~BusSubscriber() {}
 
 };

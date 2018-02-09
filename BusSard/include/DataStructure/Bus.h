@@ -3,8 +3,8 @@
 
 #include <vector>
 
-#include "DataStructure/BusSubscriber.h"
-#include "DataStructure/BusNode.h"
+//#include "DataStructure/BusSubscriber.h"
+//#include "DataStructure/BusNode.h"
 
 
 namespace DataStructure {
@@ -34,17 +34,16 @@ class Bus {
 
 };
 
-Bus* Bus::instance = 0;
 
 class CGuard
 {
 public:
 	~CGuard()
 	{
-		if(NULL != Bus::instance)
+		if(Bus::instance != nullptr)
 		{
 			delete Bus::instance;
-			Bus::instance = NULL;
+			Bus::instance = nullptr;
 		}
 	}
 };

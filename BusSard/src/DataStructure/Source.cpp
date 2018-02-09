@@ -7,4 +7,4 @@ namespace DataStructure {
 		return name;
 	}
 
-}
+} /* End of namespace DataStructure */

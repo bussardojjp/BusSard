@@ -2,12 +2,6 @@
 
 namespace DataStructure {
 
+Bus* Bus::instance = 0;
 
-
-
-Bus* Bus::getInstance()
-{
-	return instance;
-}
-
-}
+} /* End of namespace DataStructure */
