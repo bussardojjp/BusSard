@@ -41,7 +41,7 @@
 //  NANA_ENABLE_MINGW_STD_THREADS_WITH_MEGANZ is only available on MinGW when STD_THREAD_NOT_SUPPORTED is defined.
 //  if NANA_ENABLE_MINGW_STD_THREADS_WITH_MEGANZ is enabled, Boost.Thread will be replaced with meganz's mingw-std-threads.
 //  https://github.com/meganz/mingw-std-threads
-//#define NANA_ENABLE_MINGW_STD_THREADS_WITH_MEGANZ
+#define NANA_ENABLE_MINGW_STD_THREADS_WITH_MEGANZ
 
 //# The ISO C++ File System Technical Specification(ISO - TS, or STD) is optional.
 //#              http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf
@@ -59,7 +59,7 @@
 //#define BOOST_FILESYSTEM_AVAILABLE // "Is Boost filesystem available?"
 //#define BOOST_FILESYSTEM_FORCE     // "Force use of Boost filesystem if available (over ISO and nana)
 //#define STD_FILESYSTEM_FORCE       // "Use of STD filesystem?(a compilation error will ocurre if not available)" OFF)
-//#define NANA_FILESYSTEM_FORCE      // "Force nana filesystem over ISO and boost?" OFF)
+#define NANA_FILESYSTEM_FORCE      // "Force nana filesystem over ISO and boost?" OFF)
 //
 //	Make sure you (cmake?) provide the following where correspond (please find the correct values):
 //	set CMAKE_BOOST_FILESYSTEM_INCLUDE_ROOT "Where to find <boost/filesystem.hpp>?" "../")
