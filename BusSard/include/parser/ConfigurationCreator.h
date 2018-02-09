@@ -15,10 +15,11 @@ namespace Parser {
 class ConfigurationCreator {
 
 private:
+	std::string path;
 	Configuration* appConfig;
 
 public:
-	ConfigurationCreator(std::string path);
+	ConfigurationCreator(const std::string path);
 	virtual ~ConfigurationCreator(){
 		delete appConfig;
 	};

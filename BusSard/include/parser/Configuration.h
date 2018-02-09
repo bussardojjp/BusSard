@@ -9,13 +9,31 @@ namespace Parser {
 
 class Configuration {
 
+ private:
+	int resolutionX;
+	int resolutionY;
+
  public:
 
-    /**
-     * @element-type ConfigurationCreator
-     */
-    ConfigurationCreator *myConfigurationCreator;
+ 	int getResolutionX() const {
+ 		return resolutionX;
+ 	}
+
+ 	void setResolutionX(int resolutionX) {
+ 		this->resolutionX = resolutionX;
+ 	}
+
+ 	int getResolutionY() const {
+ 		return resolutionY;
+ 	}
+
+ 	void setResolutionY(int resolutionY) {
+ 		this->resolutionY = resolutionY;
+ 	}
+
 };
+
+
 
 } /* End of namespace Parser */
 

@@ -16,16 +16,13 @@
 int main()
 {
 
-	using namespace nana;
-	GUI::GUIBuilder guiBuilder;
-	guiBuilder.buildGUI();
-    /*form    fm;
-    label   lb(fm, rectangle(fm.size()));
-    lb.caption("Hello, World");
-    fm.show();
-    exec();*/
-
    Parser::ConfigurationCreator cf("resource/modules/test.xml");
-   cf.readConfig();
+   Parser::Configuration* conf = cf.readConfig();
+
+   //Bus init
+
+   //Com package
+
+   //GUI
 
 }
