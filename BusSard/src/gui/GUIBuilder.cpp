@@ -26,30 +26,38 @@ GUIBuilder::~GUIBuilder() {
 void GUIBuilder::buildGUI(Parser::Configuration* conf)
 {
 	using namespace nana;
-	MainFrame mainWindow(conf);
-	place myPlace(mainWindow);
+	mainFrame = new MainFrame(conf);
 
-	panel<false> w(mainWindow);
-	place subPlace(w);
+	//panel<true> p;
+	//p.create(mainFrame);
 
-	size sizeBus(600,800);
+	//size sizeBus(600,800);
 	//MainFrame sideWindow(conf);
-	picture picBusUnin(mainWindow);
-
+	/*
+	picture picBusUnin(p);
+	picBusUnin.size(sizeBus);
+	picBusUnin.load(paint::image("resource/Busleitung.png"));
 	picBusUnin.stretchable(1);
 
+	picture picBusUnin2(p);
+	picBusUnin2.size(sizeBus);
+	picBusUnin2.load(paint::image("resource/Busleitung.png"));
+	picBusUnin2.stretchable(1);
+*/
+	menuBar = new MenuBar(mainFrame);
 
-
+	//Root Layout
+	place myPlace(*mainFrame);
 	myPlace.div("vert<birne><bus>");
-	myPlace["birne"] << w;
+	myPlace["birne"] << *menuBar;
 
-	subPlace.div("<oben><unten>");
 	//subPlace["oben"] << picBusUnin;
 
-	picBusUnin.size(sizeBus);
+	//subPlace.div("<oben><unten>");
+	//subPlace["oben"] << picBusUnin;
 
-	picBusUnin.load(paint::image("resource/Busleitung.png"));
-	mainWindow.show();
+
+	mainFrame->show();
 
 	exec();
 }

@@ -13,10 +13,15 @@
 #include "nana/gui/place.hpp"
 
 #include "parser/Configuration.h"
+#include "gui/MenuBar.h"
 
 namespace GUI {
 
 class GUIBuilder {
+private:
+	MainFrame* mainFrame;
+	MenuBar* menuBar;
+
 public:
 	GUIBuilder();
 	virtual ~GUIBuilder();
