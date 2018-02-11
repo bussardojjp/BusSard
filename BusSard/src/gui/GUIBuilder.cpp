@@ -26,32 +26,10 @@ GUIBuilder::~GUIBuilder() {
 
 void GUIBuilder::buildGUI(Parser::Configuration* conf)
 {
-	//mainFrame = new MainFrame(conf);
+	mainFrame = new MainFrame(conf);
 	//mainFrame->collocate();
-	//mainFrame->show();
-	using namespace nana;
+	mainFrame->show();
 
-		form fm;
-		group grp(fm);
-
-		grp.caption(L"Group Example");
-		grp.move(rectangle{ 10, 10, 200, 100 });
-
-		grp.div("<>");
-
-		//Create a label and a spinbox which are children of the group
-		label lb(grp);
-		lb.caption("Angle:");
-
-		//spinbox spbox(grp);
-		//spbox.range(0.0, 359.0, 1.0);
-
-		grp["angle"] << lb;
-		//grp["angle_value"] << spbox;
-		grp.collocate();
-
-		fm.show();
-		exec();
 }
 
 
