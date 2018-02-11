@@ -26,6 +26,7 @@ private:
 	DetailView *detailView;
 	BusView *busView;
 	MenuBar *menuBar;
+	MenuBar *test;
 	Console *console;
 
 	void buildGUI();

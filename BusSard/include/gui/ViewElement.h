@@ -10,13 +10,14 @@
 
 #include "gui/MainFrame.h"
 #include "nana/gui/widgets/group.hpp"
+#include "nana/gui/widgets/panel.hpp"
 #include "nana/gui/wvl.hpp"
 
 namespace GUI{
 
 	class MainFrame;
 
-	class ViewElement : public nana::group{
+	class ViewElement : public nana::panel<true>{//nana::group{
 
 	protected:
 		MainFrame* context;

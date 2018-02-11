@@ -25,10 +25,14 @@ void MainFrame::buildGUI(){
 	this->menuBar = new MenuBar(this);
 	this->menuBar->build();
 
+	this->test = new MenuBar(this);
+	this->test->build();
+
 	//Root Layout
 	layout = new nana::place(*this);
 	layout->div("vert<menu><bus>");
 	(*layout)["bus"] << *menuBar;
+	(*layout)["menu"] << *test;
 
 	//Not yet implemented
 	this->busView = nullptr;
