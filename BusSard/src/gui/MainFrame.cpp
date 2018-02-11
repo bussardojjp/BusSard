@@ -30,7 +30,7 @@ void MainFrame::buildGUI(){
 
 	//Root Layout
 	layout = new nana::place(*this);
-	layout->div("vert<menu><bus>");
+	layout->div("vert< weight=50 menu ><bus>");
 	(*layout)["bus"] << *menuBar;
 	(*layout)["menu"] << *test;
 

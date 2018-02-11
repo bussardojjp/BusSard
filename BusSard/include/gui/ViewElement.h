@@ -17,9 +17,10 @@ namespace GUI{
 
 	class MainFrame;
 
-	class ViewElement : public nana::panel<true>{//nana::group{
+	class ViewElement : public nana::panel<true>{  //nana::group{
 
 	protected:
+		nana::place* layout;
 		MainFrame* context;
 
 	public:

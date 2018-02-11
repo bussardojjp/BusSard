@@ -12,9 +12,10 @@ namespace GUI{
 	ViewElement::ViewElement(MainFrame* context){
 		this->context = context;
 		create(*context, true);
+		this->layout = new nana::place(*this);
 	}
 
 	ViewElement::~ViewElement() {
-
+		delete layout;
 	}
 }

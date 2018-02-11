@@ -10,26 +10,24 @@
 
 namespace GUI {
 
-MenuBar::MenuBar(MainFrame* context) : ViewElement(context){
-
-}
+MenuBar::MenuBar(MainFrame* context) : ViewElement(context){}
 
 void MenuBar::build(){
 
-	nana::size sizeBus(600,800);
-	busPicture = new nana::picture(*this);
-	busPicture->size(sizeBus);
-	busPicture->load(nana::paint::image("resource/Busleitung.png"));
-	busPicture->stretchable(1);
-	busPicture->move(nana::rectangle{ 500, 0, 800, 600 });
-
+	//Elements
 	btn_busConnect = new nana::button(*this, "Bus verbinden", true);
-	btn_busConnect->move(nana::rectangle{ 10, 10, 200, 100 });
+	btn_busRefresh = new nana::button(*this, "Bus aktualiesieren", true);
+	btn_busDownload = new nana::button(*this, "Konfiguration herunterladen", true);
+	btn_busUpload = new nana::button(*this, "Konfiguration hochladen", true);
 
-}
+	//Layout
+	this->layout->div("<b1><b2><b3><b4>");
+	(*layout)["b1"] << *btn_busConnect;
+	(*layout)["b2"] << *btn_busRefresh;
+	(*layout)["b3"] << *btn_busDownload;
+	(*layout)["b4"] << *btn_busUpload;
+	layout->collocate();
 
-nana::picture* MenuBar::getBusPicture(){
-	return busPicture;
 }
 
 } /* End of namespace GUI */

@@ -30,8 +30,13 @@ int main()
 	nana::exec();
 
 }
-
-/*
+/* Code Snippets
+nana::size sizeBus(600,800);
+busPicture = new nana::picture(*this);
+busPicture->size(sizeBus);
+busPicture->load(nana::paint::image("resource/Busleitung.png"));
+busPicture->stretchable(1);
+--
 	drawer = new nana::drawing(*mainframe);
 
 	drawer->draw([&](nana::paint::graphics& graph) {

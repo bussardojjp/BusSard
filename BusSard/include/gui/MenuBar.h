@@ -6,6 +6,7 @@
 #include "nana/gui/widgets/picture.hpp"
 #include "nana/gui/widgets/button.hpp"
 #include "nana/gui/widgets/group.hpp"
+#include "nana/gui/place.hpp"
 #include "nana/gui/wvl.hpp"
 
 namespace GUI {
@@ -16,15 +17,16 @@ namespace GUI {
 
 class MenuBar : public ViewElement {
 private:
-	nana::picture* busPicture;
+
 	nana::button* btn_busConnect;
-	nana::drawing* draw;
+	nana::button* btn_busRefresh;
+	nana::button* btn_busDownload;
+	nana::button* btn_busUpload;
 
 public:
 	 MenuBar(MainFrame* context);
 	 virtual void build() override;
 
-	 nana::picture* getBusPicture();
 };
 
 } /* End of namespace GUI */

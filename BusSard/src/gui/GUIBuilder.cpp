@@ -27,7 +27,7 @@ GUIBuilder::~GUIBuilder() {
 void GUIBuilder::buildGUI(Parser::Configuration* conf)
 {
 	mainFrame = new MainFrame(conf);
-	//mainFrame->collocate();
+	mainFrame->collocate();
 	mainFrame->show();
 }
 
