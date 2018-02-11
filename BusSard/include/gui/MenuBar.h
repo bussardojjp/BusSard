@@ -3,11 +3,8 @@
 
 #include "gui/MainFrame.h"
 #include "gui/ViewElement.h"
-#include "nana/gui/widgets/picture.hpp"
+
 #include "nana/gui/widgets/button.hpp"
-#include "nana/gui/widgets/group.hpp"
-#include "nana/gui/place.hpp"
-#include "nana/gui/wvl.hpp"
 
 namespace GUI {
 class MainFrame;

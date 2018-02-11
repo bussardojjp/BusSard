@@ -2,10 +2,8 @@
 
 #include "gui/MenuBar.h"
 #include "gui/ViewElement.h"
-#include "nana/gui/widgets/picture.hpp"
+
 #include "nana/gui/widgets/button.hpp"
-#include "nana/gui/widgets/group.hpp"
-#include "nana/gui/wvl.hpp"
 
 
 namespace GUI {
