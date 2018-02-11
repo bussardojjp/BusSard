@@ -27,4 +27,15 @@ int main()
 
    //GUI
 
+	nana::exec();
+
 }
+
+/*
+	drawer = new nana::drawing(*mainframe);
+
+	drawer->draw([&](nana::paint::graphics& graph) {
+		//graph.rectangle(true, nana::colors::black); // flush the backbuffer
+		this->get_drawer_trigger().refresh(graph);
+	});
+*/

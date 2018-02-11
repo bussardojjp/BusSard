@@ -5,61 +5,54 @@
  *      Author: 90788
  */
 
-#include "gui/GUIBuilder.h"
-#include "nana/gui/wvl.hpp"
-#include "nana/gui/widgets/picture.hpp"
-#include "nana/gui/place.hpp"
-#include "nana/gui/widgets/panel.hpp"
-#include "gui/MainFrame.h"
+#include <gui/GUIBuilder.h>
+#include <gui/MainFrame.h>
+#include <nana/gui/widgets/group.hpp>
+#include <nana/gui/widgets/label.hpp>
+#include <nana/gui/widgets/spinbox.hpp>
 
 namespace GUI {
 
 GUIBuilder::GUIBuilder() {
-	// TODO Auto-generated constructor stub
-
+	mainFrame = nullptr;
+	menuBar = nullptr;
 }
 
 GUIBuilder::~GUIBuilder() {
-	// TODO Auto-generated destructor stub
+	delete menuBar;
+	delete mainFrame;
 }
+
 
 void GUIBuilder::buildGUI(Parser::Configuration* conf)
 {
+	//mainFrame = new MainFrame(conf);
+	//mainFrame->collocate();
+	//mainFrame->show();
 	using namespace nana;
-	mainFrame = new MainFrame(conf);
 
-	//panel<true> p;
-	//p.create(mainFrame);
+		form fm;
+		group grp(fm);
 
-	//size sizeBus(600,800);
-	//MainFrame sideWindow(conf);
-	/*
-	picture picBusUnin(p);
-	picBusUnin.size(sizeBus);
-	picBusUnin.load(paint::image("resource/Busleitung.png"));
-	picBusUnin.stretchable(1);
+		grp.caption(L"Group Example");
+		grp.move(rectangle{ 10, 10, 200, 100 });
 
-	picture picBusUnin2(p);
-	picBusUnin2.size(sizeBus);
-	picBusUnin2.load(paint::image("resource/Busleitung.png"));
-	picBusUnin2.stretchable(1);
-*/
-	menuBar = new MenuBar(mainFrame);
+		grp.div("<>");
 
-	//Root Layout
-	place myPlace(*mainFrame);
-	myPlace.div("vert<birne><bus>");
-	myPlace["birne"] << *menuBar;
+		//Create a label and a spinbox which are children of the group
+		label lb(grp);
+		lb.caption("Angle:");
 
-	//subPlace["oben"] << picBusUnin;
+		//spinbox spbox(grp);
+		//spbox.range(0.0, 359.0, 1.0);
 
-	//subPlace.div("<oben><unten>");
-	//subPlace["oben"] << picBusUnin;
+		grp["angle"] << lb;
+		//grp["angle_value"] << spbox;
+		grp.collocate();
 
-
-	mainFrame->show();
-
-	exec();
+		fm.show();
+		exec();
 }
+
 
 } /* namespace GUI */
